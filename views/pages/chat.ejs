@@ -1,0 +1,20 @@
+<%- include('../layout/top') %>
+<h1>CHAT APPLICATION</h1>
+<p>Loged as : <%= username %> </p>
+
+<form action="/logout" method="POST">
+    <button>LOG OUT</button>
+</form>
+
+<form action="/messages" method="POST">
+    <input type="text" name="message" placeholder="Enter Your Message">
+    <button>CHAT!</button>
+</form>
+
+<script src="scripts/polling.js"></script>
+
+<section class="messages">
+<%- include('../partials/messages', {messages}) %> 
+</section>
+
+<%- include('../layout/bottom') %> 
